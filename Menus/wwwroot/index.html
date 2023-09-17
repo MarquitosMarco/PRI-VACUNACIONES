@@ -1,0 +1,128 @@
+@page "/counter"
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #12A075;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #menu {
+            background-color: #12A075;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+        }
+
+            #menu a {
+                color: #FFFFFF;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+                #menu a:hover {
+                    text-decoration: underline;
+                }
+
+        #content {
+            display: flex;
+        }
+
+        #sidebar {
+            background-color: #8AEBCE;
+            padding: 20px;
+            width: 30%;
+        }
+
+        #main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .button {
+            background-color: #8AEBCE;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #12A075;
+            }
+
+        #datagrid {
+            background-color: #FFFFFF;
+            color: #000000;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #datagrid th, #datagrid td {
+                border: 1px solid #000000;
+                padding: 8px;
+                text-align: left;
+            }
+
+            #datagrid th {
+                background-color: #8AEBCE;
+            }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Bienvenido</h1>
+    </div>
+
+    <div id="menu">
+        <a href="#">Nombre</a>
+        <a href="#">Fecha y Hora</a>
+        <a href="#">Conectado</a>
+        <a href="#" style="float: right;"><img src="logo_salir.png" alt="Salir" /> Salir</a>
+    </div>
+
+    <div id="content">
+        <div id="sidebar">
+            <button class="button">Crear Usuarios</button>
+            <button class="button">Editar Usuarios</button>
+            <button class="button">Eliminar Usuarios</button>
+        </div>
+
+        <div id="main">
+            <table id="datagrid">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Sexo</th>
+                    <th>Municipio</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>01/01/1990</td>
+                    <td>Masculino</td>
+                    <td>Ciudad</td>
+                </tr>
+                <!-- Agrega más filas de datos aquí -->
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
