@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tag_Uno.MainPage"
+             Title="Vacunación"
+             >
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Imagen de fondo -->
+        <Image Source="Tag_uno/Images/fondo.png" Aspect="AspectFill" />
+
+        <!-- Contenido -->
+        <VerticalStackLayout Spacing="10" Margin="20,10,20,0">
+
+            <Label Text="Iniciar Sesion" FontSize="Title"  HorizontalOptions="Center"  />
+            <Image  Source="Tag_uno/Images/sedes.jpg" WidthRequest="350" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center" />
+            
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <Frame Padding="8,2,8,2" Margin="0,3,0,10" BackgroundColor="#0B8EE0" Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Entry x:Name="name_user_Entry" Placeholder="Ingrese su usuario" />
+                        <!-- Icono -->
+                        <Image Grid.Column="1" Source="Tag_uno/Images/usuario.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center" />
+
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="8,2,8,2" Margin="0,10,0,10" BackgroundColor="#0B8EE0" Grid.Row="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Entry x:Name="password_Entry" Placeholder="Ingrese su contraseña" IsPassword="True"/>
+                        <!-- Icono -->
+                        <Image Grid.Column="1" Source="Tag_uno/Images/newPassword.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                </Frame>
+
+
+
+                <Frame Padding="8,2,8,2" Margin="0,10,0,10" BackgroundColor="#0B8EE0" Grid.Row="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="Lugar" />
+                        <Picker x:Name="myPicker">
+                            <Picker.Items>
+                                <x:String>Cercado</x:String>
+                                <x:String>Vinto</x:String>
+                                <x:String>Quillacollo</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Image Grid.Column="1" Source="Tag_uno/Images/select.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Center" />
+                    </Grid>
+                </Frame>
+                
+                
+             
+
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <!-- Columna para el espacio en blanco -->
+                        <ColumnDefinition Width="*" />
+                        <!-- Columna para el Label -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Espacio en blanco en la columna 0 para empujar el Label a la derecha -->
+                    <BoxView Grid.Column="0" WidthRequest="10" HeightRequest="1" BackgroundColor="Transparent" />
+
+                    <Label x:Name="recuperarContraseñaLabel" Text="Cambiar Contraseña" VerticalOptions="Center" Grid.Column="1" Margin="0,15,0,10">
+
+                    </Label>
+                </Grid>
+
+                <!-- Botón -->
+                <Button Text="Ingresar" HorizontalOptions="FillAndExpand" Clicked="IngresarButton_Clicked" x:Name="IngresarButton" BackgroundColor="#00863F" Grid.Row="4" Margin="0,20,0,10" />
+            </Grid>
+            <Label x:Name="validationLabel" TextColor="Red" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </Grid>
+
+
+</ContentPage>
