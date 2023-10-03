@@ -1,4 +1,5 @@
 ﻿using tag1.Resources.Tools;
+using tag1.View;
 
 namespace tag1;
 
@@ -45,6 +46,14 @@ public partial class MainPage : ContentPage
             ButtonRegister.IsEnabled = true;
         }
     }
+
+    private async void Person_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CreatePerson());
+    }
+
+
+
     private async void Register_Clicked(object sender, EventArgs e)
     {
         string newPassword = new_password_Entry.Text;

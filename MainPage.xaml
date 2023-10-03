@@ -25,6 +25,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
 
@@ -79,7 +80,8 @@
 
                 <!-- Botón -->
                 <Button Text="Validar Contraseña" x:Name="ButtonValidate" Clicked="Validate_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#00863F" Grid.Row="4" Margin="0,15,0,0" />
-                <Button Text="Confirmar Actulizacion" x:Name="ButtonRegister" Clicked="Register_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#00863F" Grid.Row="5" Margin="0,20,0,0" IsEnabled="False" />
+                <Button Text="Registrar Persona" x:Name="PersonRegister" Clicked="Person_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#00863F" Grid.Row="5" Margin="0,15,0,0" />
+                <Button Text="Confirmar Actulizacion" x:Name="ButtonRegister" Clicked="Register_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#00863F" Grid.Row="6" Margin="0,20,0,0" IsEnabled="False" />
                 <Label x:Name="validationLabel" TextColor="Red" HorizontalOptions="Center" Grid.Row="6"  />
             </Grid>
         </VerticalStackLayout>

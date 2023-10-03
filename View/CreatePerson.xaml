@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tag1.View.CreatePerson"
+             Title="CreatePerson">
+    <VerticalStackLayout>
+        <ScrollView>
+           
+
+            <StackLayout Margin="20">
+                <Label Text="Nombre:" />
+                <Entry Placeholder="Nombre" x:Name="NombreEntry" Text="{Binding Nombre}" />
+
+                <Label Text="Apellido:" />
+                <Entry Placeholder="Apellido" x:Name="ApellidoEntry" Text="{Binding Apellido}" />
+
+                <Label Text="Segundo Apellido:" />
+                <Entry Placeholder="Segundo Apellido" x:Name="SegundoApellidoEntry" Text="{Binding SegundoApellido}" />
+
+                <Label Text="Género:" />
+                <Entry Placeholder="Género" x:Name="GeneroEntry" Text="{Binding Genero}" />
+
+                <Label Text="CI:" />
+                <Entry Placeholder="CI" x:Name="CIEntry" Text="{Binding CI}" />
+
+                <Label Text="Teléfono:" />
+                <Entry Placeholder="Teléfono" x:Name="TelefonoEntry" Text="{Binding Telefono}" />
+
+                <Label Text="Dirección:" />
+                <Entry Placeholder="Dirección" x:Name="DireccionEntry" Text="{Binding Direccion}" />
+
+                <Label Text="Estado:" />
+                <Entry Placeholder="Estado" x:Name="EstadoEntry" Text="{Binding Estado}" />
+
+
+                <Button Text="Guardar" Command="{Binding CreatePersonCommand}" />
+            </StackLayout>
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
