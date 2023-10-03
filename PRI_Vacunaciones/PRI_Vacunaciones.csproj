@@ -50,19 +50,23 @@
 
 	<ItemGroup>
 		<PackageReference Include="Camera.MAUI" Version="1.4.4" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\Scaner.xaml.cs">
+	  <Compile Update="Pages\Info_Pet.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
-	  <Compile Update="Scaner.xaml.cs">
-	    <DependentUpon>Scaner.xaml</DependentUpon>
+	  <Compile Update="Pages\Scaner.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\Info_Pet.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\Scaner.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

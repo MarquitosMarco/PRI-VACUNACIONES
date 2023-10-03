@@ -1,16 +1,24 @@
-﻿namespace PRI_Vacunaciones
+﻿using System.Runtime.CompilerServices;
+using PRI_Vacunaciones.Services;
+namespace PRI_Vacunaciones
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        //int count = 0;
 
-        public MainPage()
+        private readonly IPerson _person;
+       
+
+        public MainPage(IPerson service)
         {
+
             InitializeComponent();
+            _person =
+               service;
 
             cameraView.BarCodeOptions = new()
             {
-                PossibleFormats = {ZXing.BarcodeFormat.QR_CODE,ZXing.BarcodeFormat.CODE_39}//solo para qr
+                PossibleFormats = {ZXing.BarcodeFormat.QR_CODE,ZXing.BarcodeFormat.CODE_39 }//solo para qr
             };
                 
         }
@@ -30,6 +38,7 @@
 
                 });
             }
+           
         }
         //Metodo que detecta el codigo
         private void cameraView_BarcodeDetected(object sender,Camera.MAUI.ZXingHelper.BarcodeEventArgs args)
@@ -40,12 +49,13 @@
             });
         }
         //Metodo para la busqueda
-        private void OnSearchButtonPressed(object sender, EventArgs e)
+        private async void OnSearchButtonPressed(object sender, EventArgs e)
         {
-            string searchText = searchBar.Text;
+             string searchText = searchBar.Text;
+       
 
-            // Realiza aquí la lógica de búsqueda basada en el texto ingresado en el SearchBar
-            // Puedes actualizar la interfaz de usuario o realizar otras acciones según tus necesidades
+        //    // Realiza aquí la lógica de búsqueda basada en el texto ingresado en el SearchBar
+        //    // Puedes actualizar la interfaz de usuario o realizar otras acciones según tus necesidades
 
             DisplayAlert("Búsqueda", $"Realizando búsqueda: {searchText}", "Aceptar");
         }
@@ -53,6 +63,7 @@
         private void OnSearchButtonClicked(object sender, EventArgs e)
         {
             string searchText = searchBar.Text;
+
 
             // Realiza aquí la lógica de búsqueda basada en el texto ingresado en el SearchBar
             // Puedes actualizar la interfaz de usuario o realizar otras acciones según tus necesidades
