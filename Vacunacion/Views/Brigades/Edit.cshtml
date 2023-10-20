@@ -1,0 +1,90 @@
+﻿@model Vacunacion.Models.Brigade
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h1>Editar</h1>
+<link rel="stylesheet" href="~/css/Brigade.css" asp-append-version="true" />
+<h4>Brigade</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" class="form-container">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Latitude" class="control-label"></label>
+                <input asp-for="Latitude" class="form-control" />
+                <span asp-validation-for="Latitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Longitude" class="control-label"></label>
+                <input asp-for="Longitude" class="form-control" />
+                <span asp-validation-for="Longitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CampaignId" class="control-label"></label>
+                <select asp-for="CampaignId" class="form-control" asp-items="ViewBag.CampaignId"></select>
+                <span asp-validation-for="CampaignId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <div class="form-group">
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div id="map" style="height: 500px;"></div>
+    </div>
+</div>
+
+
+
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1sYvd0gJpXLro-URaax9CVIdcnPnTZrs&libraries=places&callback=initMap" async defer></script>
+<script>
+    var map;
+    var marker;
+
+    function initMap() {
+        var mapOptions = {
+            center: { lat: -17.386285, lng: -66.168838 }, // Coordenadas iniciales
+            zoom: 20, // Nivel de zoom
+            scrollwheel: true
+        };
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        marker = new google.maps.Marker({
+            position: { lat: -17.386285, lng: -66.168838 }, // Posición inicial del marcador
+            map: map,
+            draggable: true, // Permite arrastrar el marcador
+        });
+
+        // Evento para actualizar la posición del marcador cuando se arrastra
+        google.maps.event.addListener(marker, "dragend", function (event) {
+            document.getElementById("Latitude").value = marker.getPosition().lat();
+            document.getElementById("Longitude").value = marker.getPosition().lng();
+        });
+    }
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

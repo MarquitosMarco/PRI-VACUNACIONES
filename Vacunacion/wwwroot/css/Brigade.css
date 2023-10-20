@@ -1,0 +1,47 @@
+﻿.form-container {
+    background-color: transparent; /* Fondo totalmente transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin: 20px; /* Márgenes */
+    text-align: center; /* Alineación al centro */
+    max-width: 400px; /* Ancho máximo */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+}
+
+    .form-container h1 {
+        font-size: 24px; /* Tamaño de fuente del encabezado */
+        margin-bottom: 20px; /* Espaciado inferior del encabezado */
+    }
+
+.form-group {
+    margin-bottom: 20px; /* Espaciado inferior entre grupos */
+}
+
+    .form-group label {
+        display: block; /* Mostrar etiquetas en bloques */
+        font-weight: bold; /* Texto en negritas */
+        margin-bottom: 5px; /* Espaciado inferior de etiquetas */
+    }
+
+    .form-group input {
+        width: 100%; /* Ancho completo */
+        padding: 10px; /* Espaciado interno de campos de entrada */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+    }
+
+        .form-group input[type="submit"] {
+            background-color: #007bff; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border-radius: 5px; /* Bordes redondeados del botón */
+            cursor: pointer; /* Cursor de puntero al pasar sobre el botón */
+            font-weight: bold; /* Texto en negritas */
+        }
+
+            .form-group input[type="submit"]:hover {
+                background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+            }

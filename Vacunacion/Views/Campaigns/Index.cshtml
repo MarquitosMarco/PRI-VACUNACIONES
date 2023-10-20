@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Vacunacion.Models.Campaign>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha Inicio</th>
+            <th scope="col">Fecha Final</th>
+            <th scope ="col">Vacuna</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Usuario</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeVacine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.CampaignId" class="btn btn-success btn-sm">Edit</a> 
+                    <a asp-action="Delete" asp-route-id="@item.CampaignId" class="btn btn-danger btn-sm" style="margin-left:10%">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+﻿/* Estilos para el Navbar */
+.navbar {
+    background-color: #3498db; /* Cambia el color de fondo del Navbar */
+}
+
+.navbar-brand {
+    color: #fff; /* Cambia el color del texto del logo */
+}
+
+    .navbar-brand img {
+        margin-right: 10px; /* Añade espacio entre el logo y el texto */
+    }
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Cambia el color del icono del botón de menú en modo colapsado */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 20px; /* Espacio entre elementos de menú */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Cambia el color del texto del enlace en modo colapsado */
+}
+
+/* Estilos para el menú desplegable en modo colapsado */
+.navbar-toggler {
+    color: #fff; /* Cambia el color del icono del botón de menú en modo colapsado */
+}
+
+/* Estilos al desplegar el menú en dispositivos más grandes */
+@media (min-width: 768px) {
+    .navbar-nav .nav-item {
+        margin-right: 40px; /* Aumenta el espacio entre elementos de menú */
+    }
+
+    .navbar-nav .nav-link {
+        font-weight: bold; /* Cambia el peso de la fuente del enlace en modo ampliado */
+    }
+}

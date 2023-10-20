@@ -1,0 +1,36 @@
+﻿@model Vacunacion.Models.User
+
+
+
+
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+
+
+
+<body>
+    <section style="margin-top:15%">
+        <div class="form-box">
+            <div class="form-value">
+                <form asp-controller="Login" asp-action="LoginIndex" method="post">
+                    <div class="logo">
+                        <!-- Imagen circular que esté mitad dentro y mitad fuera del formulario -->
+                        <img src="https://images.vexels.com/media/users/3/128119/isolated/preview/799b2c231abb7d1ec83e86d14006495c-icono-de-llaves-inmobiliarias.png" alt="Logo" class="rounded-circle" />
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input asp-for="UserName" placeholder="Escribe tu nombre de usuario"  class="form-control"/>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input asp-for="Password" type="password" placeholder="Escribe tu contraseña" class="form-control" />
+                    </div>
+                    
+                    <button type="submit" style="margin-top:10%">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>

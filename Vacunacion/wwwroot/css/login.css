@@ -1,0 +1,152 @@
+﻿/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    background: url(../img/body.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* Estilos para el formulario */
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    background: rgba(0, 0, 0, 0.5); /* Agrega un fondo semitransparente */
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+    .inputbox label {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 1em;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget {
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space between;
+}
+
+    .forget label input {
+        margin-right: 3px;
+    }
+
+    .forget label a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .forget label a:hover {
+            text-decoration: underline;
+        }
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Estilos para el mensaje de bienvenida */
+.welcome-message {
+    background: #28a745; /* Cambia el color de fondo al verde */
+    color: #fff; /* Cambia el color del texto a blanco */
+    padding: 10px; /* Agrega un espacio alrededor del mensaje */
+    text-align: center; /* Centra el texto */
+    margin-top: 10px; /* Agrega margen superior */
+}
+
+/* Estilos para la clase .register y otros estilos específicos */
+.register {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+    .register p a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+    }
+
+        .register p a:hover {
+            text-decoration: underline;
+        }
+::placeholder {
+    color: #fff;
+}
+
+/* Cambia el color del marcador a blanco para elementos específicos si es necesario */
+.inputbox input::placeholder {
+    color: #fff;
+}
+
+.logo {
+    width: 150px; /* Ajusta el ancho según tus necesidades */
+    height: 150px; /* Ajusta la altura según tus necesidades */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    overflow: hidden; /* Oculta cualquier parte que se extienda más allá del círculo */
+    position: absolute; /* Posición absoluta para que esté encima del formulario */
+    left: 50%; /* Coloca el logo en el centro horizontal */
+    top: 2%; /* Ajusta el valor para posicionar verticalmente hacia arriba */
+    bottom: 20%; /* Ajusta el valor para posicionar verticalmente hacia abajo */
+    transform: translate(-50%, -50%); /* Alinea el centro del logo al centro del formulario */
+}
+    .logo img {
+        width: 100%; /* La imagen se ajustará al 100% del ancho del contenedor */
+        height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    }

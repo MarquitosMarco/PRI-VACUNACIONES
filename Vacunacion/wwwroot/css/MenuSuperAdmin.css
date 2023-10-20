@@ -1,0 +1,15 @@
+﻿.btn-shaded {
+    background-color: #007BFF; /* Color de fondo para el botón */
+    color: #fff; /* Color de texto */
+    border: none; /* Quita el borde del botón */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombreado al botón */
+    padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+    border-radius: 5px; /* Agrega esquinas redondeadas */
+    transition: background-color 0.3s; /* Agrega una transición suave al color de fondo */
+    /* Estilos adicionales cuando se pasa el ratón por encima */
+    &:hover
+
+{
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+}
+}
