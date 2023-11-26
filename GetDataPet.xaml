@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeQrScanner.GetDataPet"
+             Title="Obtener Datos de la Mascota">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#6B76FF" Offset="0.0" />
+                        <GradientStop Color="#C6F8FF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <!-- Primera columna con detalles del animal -->
+                    <ColumnDefinition Width="*" />
+                    <!-- Segunda columna con las imágenes -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Columna 1: Detalles del animal -->
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Label Text="Pet Details" FontSize="Large" HorizontalOptions="CenterAndExpand" Margin="10" TextColor="Black" />
+                    <Button Text="Registrar" Clicked="CopyEditorText" TextColor="Black" />
+                    <Label Text="Pet Name:" TextColor="Black" />
+                    <Label x:Name="PetNameLabel" TextColor="Black" />
+                    <Label Text="Owner Name:" TextColor="Black" />
+                    <Label x:Name="OwnerNameLabel" TextColor="Black" />
+                    <Label Text="CI:" TextColor="Black" />
+                    <Label x:Name="CILabel" TextColor="Black" />
+                    <Label Text="Specie:" TextColor="Black" />
+                    <Label x:Name="SpecieLabel" TextColor="Black" />
+                    <Label Text="Breed:" TextColor="Black" />
+                    <Label x:Name="BreedLabel" TextColor="Black" />
+                    <Label Text="Gender:" TextColor="Black" />
+                    <Label x:Name="GenderLabel" TextColor="Black" />
+                    <Label Text="Description:" TextColor="Black" />
+                    <Label x:Name="DescriptionLabel" TextColor="Black" />
+                </StackLayout>
+
+                <!-- Columna 2: Imágenes -->
+                <StackLayout Grid.Row="0" Grid.Column="1">
+                    <Label Text="Photos:" TextColor="Black" />
+                    <Image x:Name="Image1" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" Margin="5" />
+                    <Image x:Name="Image2" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" Margin="5" />
+                    <Image x:Name="Image3" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" Margin="5" />
+                    <Image x:Name="Image4" Aspect="AspectFill" WidthRequest="100" HeightRequest="100" Margin="5" />
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+</ContentPage>

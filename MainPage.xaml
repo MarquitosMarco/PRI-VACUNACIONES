@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarcodeQrScanner.MainPage" BindingContext="{Binding PersonViewModel}"
+             Title="ESCANEAR QR">
+
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#C6F8FF" Offset="0.0" />
+            <GradientStop Color="#6B76FF" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout>
+        <Button x:Name="takePhotoButton" Text="Take Photo Desktop" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnTakePhotoButtonClicked" BackgroundColor="#0B8EE0" TextColor="White"/>
+        <Button x:Name="takeVideoButton" Text="Take Video" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="OnTakeVideoButtonClicked" BackgroundColor="#0B8EE0" TextColor="White" />
+        <Button x:Name="NewCamera" Text="Camera" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Clicked="TakeVideoButtonClicked" BackgroundColor="#5733FF" TextColor="White" />
+
+        <Label Text="Buscar por CI" TextColor="Black" />
+
+        <Entry Placeholder="Ingrese la CI" Text="{Binding SearchCI}" BackgroundColor="#0B8EE0" TextColor="White"/>
+
+        <Button Text="Buscar" Command="{Binding SearchCommand}" BackgroundColor="#6B76FF" TextColor="White"/>
+        <Button Text="Ingresar" Clicked="OnIngresarButtonClicked" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="#0B8EE0" TextColor="White" />
+    </StackLayout>
+
+</ContentPage>
+
+
+
+
