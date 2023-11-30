@@ -4,6 +4,8 @@ namespace Vacunacion.Models
 {
     public class RegisterVaccine
     {
+        internal int TotalVacunas;
+
         [Key]
         public int RegisterId { get; set; }
         public string Name { get; set; }

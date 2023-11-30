@@ -48,7 +48,7 @@ namespace Vacunacion.Controllers
         // GET: Campaigns/Create
         public IActionResult Create()
         {
-            ViewBag.UserId = new SelectList(_context.User, "UserId", "UserName");
+            //ViewBag.UserId = new SelectList(_context.User, "UserId", "UserName");
             return View();
         }
 
@@ -71,7 +71,7 @@ namespace Vacunacion.Controllers
         // GET: Campaigns/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            ViewBag.UserId = new SelectList(_context.User, "UserId", "UserName");
+            //ViewBag.UserId = new SelectList(_context.User, "UserId", "UserName");
             if (id == null || _context.Campaign == null)
             {
                 return NotFound();

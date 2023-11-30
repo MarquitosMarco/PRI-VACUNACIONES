@@ -50,6 +50,7 @@ namespace Vacunacion.Controllers
                         {
                             if (reader.Read())
                             {
+                                    
                                 int loggedInUserId = reader.GetInt32(0);
                                 string userRole = reader.GetString(1);
 
@@ -61,11 +62,14 @@ namespace Vacunacion.Controllers
                                 if (userRole == "SuperAdmin")
                                 {
                                     // Redirigir a la página para super administradores
-                                    return View("~/Views/Menu/MenuSuperAdmin.cshtml");
+                                     //return View("~/Views/Menu/MenuSuperAdmin.cshtml");
+
+                                    return RedirectToAction("MenuSuperAdmin", "Menu");
+
                                 }
                                 else
                                 {
-                                    return View("~/Views/Menu/MenuAdmin.cshtml");
+                                    return RedirectToAction("MenuAdmin", "Menu");
                                 }
                             }
                         }

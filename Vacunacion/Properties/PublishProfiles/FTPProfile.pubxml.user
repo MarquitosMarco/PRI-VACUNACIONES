@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYEhcTaihCESygMaSyhIMpwAAAAACAAAAAAAQZgAAAAEAACAAAAAcPRVQdBMKVLU2vw80p74wFiBGyLqz70t4uCkRHdiOrwAAAAAOgAAAAAIAACAAAAD2P8rRF1WTW3al/IfpMeMyj427lwkmd4dx4Nj/Iqrv9SAAAACrqiL3I2fkRWFig6ubU3fMHiGSMl/O+2c9c2XDlHUZvkAAAAAd1/bTyleBJdaqyffjZ76ZZUlNANe7zZ7AsddPB3iUgN5NzjOdTQEKxs1S+zOm84RyqF6rsuXBl3WldS++a+m2</EncryptedPassword>
+    <_PublishTargetUrl>ftp://198.37.116.26/www.pri-vacunacion.somee.com/http://pri-vacunacion.somee.com/</_PublishTargetUrl>
+    <History>False|2023-11-15T20:29:07.6301005Z;False|2023-11-15T16:26:05.1594590-04:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

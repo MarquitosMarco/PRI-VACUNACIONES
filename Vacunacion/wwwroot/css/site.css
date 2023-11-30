@@ -21,3 +21,35 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.animated-text {
+    font-family: "Arial", sans-serif; /* Cambia la fuente a la que desees */
+    font-size: 3rem;
+    color: #00aaff; /* Color celeste para las letras */
+    animation: color-change 2s infinite alternate; /* Animación "color-change" que alterna entre colores */
+}
+
+@keyframes color-change {
+    0% {
+        color: #00aaff; /* Color celeste al inicio de la animación */
+    }
+
+    100% {
+        color: #ff6600; /* Color naranja al final de la animación */
+    }
+}

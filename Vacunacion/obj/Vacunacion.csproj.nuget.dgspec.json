@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NNN\\VacunacionWEB\\Vacunacion\\Vacunacion\\Vacunacion.csproj": {}
+    "C:\\Users\\usser\\Documents\\Vacunacion\\Vacunacion\\Vacunacion.csproj": {}
   },
   "projects": {
-    "D:\\NNN\\VacunacionWEB\\Vacunacion\\Vacunacion\\Vacunacion.csproj": {
+    "C:\\Users\\usser\\Documents\\Vacunacion\\Vacunacion\\Vacunacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NNN\\VacunacionWEB\\Vacunacion\\Vacunacion\\Vacunacion.csproj",
+        "projectUniqueName": "C:\\Users\\usser\\Documents\\Vacunacion\\Vacunacion\\Vacunacion.csproj",
         "projectName": "Vacunacion",
-        "projectPath": "D:\\NNN\\VacunacionWEB\\Vacunacion\\Vacunacion\\Vacunacion.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\NNN\\VacunacionWEB\\Vacunacion\\Vacunacion\\obj\\",
+        "projectPath": "C:\\Users\\usser\\Documents\\Vacunacion\\Vacunacion\\Vacunacion.csproj",
+        "packagesPath": "C:\\Users\\usser\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usser\\Documents\\Vacunacion\\Vacunacion\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\usser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,6 +27,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,6 +66,10 @@
               "target": "Package",
               "version": "[7.0.12, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.18.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.16, )"
@@ -89,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

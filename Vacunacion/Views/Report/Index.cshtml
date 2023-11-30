@@ -1,0 +1,118 @@
+﻿@model Vacunacion.Models.ReportsModel
+
+@{
+    var vaccineData = ViewBag.VaccineData as List<RegisterVaccine>;
+    var brigadeData = ViewBag.BrigadeData as List<BrigadeCampaign>;
+    var personRol = ViewBag.Persons as List<PersonRol>;
+}
+<h1>Reportes</h1>
+
+<!-- Primer reporte (Brigadas y Campañas) -->
+<div class="card mt-4" style="background: rgba(255, 255, 255, 0.1); margin-top:50%;">
+    <div class="card-header">
+        <h5 class="card-title">Brigadas y Campañas</h5>
+    </div>
+    <div class="card-body" style="background: rgba(255, 255, 255, 0.8);">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre de la Brigada</th>
+                        <th>Nombre de la Campaña</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in brigadeData)
+                    {
+                        <tr class="table-row animate__animated animate__fadeIn" data-toggle="tooltip" data-placement="top" title="Haz clic para seleccionar" style="cursor: pointer; transition: background-color 0.3s;">
+                            <td>@item.BrigadeName</td>
+                            <td>@item.CampaignName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Segundo reporte (Vacunas Aplicadas) -->
+<div class="card mt-4" style="background: rgba(255, 255, 255, 0.1);">
+    <div class="card-header" style="background: rgba(255, 255, 255, 0.8);">
+        <div class="card-header">
+            <h5 class="card-title">Reporte de Vacunas Aplicadas</h5>
+        </div>
+        <div class="card-body" style="background: rgba(255, 255, 255, 0.8);">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover" style="background: rgba(255, 255, 255, 0.8);">
+                    <thead>
+                        <tr>
+                            <th>Nombre de la Vacuna</th>
+                            <th>Fecha Aplicada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in vaccineData)
+                        {
+                            <tr class="table-row animate__animated animate__fadeIn" data-toggle="tooltip" data-placement="top" title="Haz clic para seleccionar" style="cursor: pointer; transition: background-color 0.3s;">
+                                <td>@item.Name</td>
+                                <td>@item.DateApplied</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Menu" asp-action="MenuSuperAdmin">
+                        <i class="fas fa-user"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+@*<!-- Tercer reporte (Médicos) -->
+<div class="card mt-4" style="background: rgba(255, 255, 255, 0.1);">
+    <div class="card-header">
+        <h5 class="card-title">Médicos</h5>
+    </div>
+    <div class="card-body" style="background: rgba(255, 255, 255, 0.8);">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Rol</th>
+                        <!-- Otros campos si es necesario -->
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var doctor in personRol)
+                    {
+                        <tr>
+                            <td>@doctor.FullName</td>
+                            <td>@doctor.Role</td>
+                            <!-- Otros campos si es necesario -->
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>*@
+
+@section scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <script>
+        $(document).ready(function () {
+            $('.table-row').click(function () {
+                $('.table-row').removeClass('table-active');
+                $(this).addClass('table-active');
+            });
+        });
+    </script>
+}

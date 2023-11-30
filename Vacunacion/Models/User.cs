@@ -11,7 +11,7 @@ namespace Vacunacion.Models
         public string? Password { get; set; }
         public string? Role { get; set; }
 
-        // Relación con People
+       
         public ICollection<Person>? Person { get; set; }
     }
 }
