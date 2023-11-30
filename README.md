@@ -126,7 +126,7 @@ la contraseña para ambos es QXUG6cV1, esa es la contraseña del usuario admin y
 La función del ingreso de datos es crear una contraseña y usuario al momento de insertar datos del usuario (medico) en el crud de crear usuarios del superadmin y
 admin se manda a un correo electrónico la nueva contraseña y usuario al medico, en este caso el ingeniero puede probar con su correo electronico.
 
-10. Seguridad:
+## 10. Seguridad:
 
 ### Login
 
