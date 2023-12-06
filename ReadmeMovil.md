@@ -573,3 +573,8 @@ Xamarin.Forms barcode QR code scanner.
  
  
 Xamarin.Forms barcode QR code scanner. 
+
+
+Video Web-Movil
+
+https://univalleedu-my.sharepoint.com/:v:/r/personal/rvj0032262_est_univalle_edu/Documents/Recordings/Reuni%C3%B3n%20con%20Juan%20Carlos%20Rojas%20Vargas-20231206_204521-Grabaci%C3%B3n%20de%20la%20reuni%C3%B3n.mp4?csf=1&web=1&e=LZNYpo&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifSwicGxheWJhY2tPcHRpb25zIjp7fX0%3D
